@@ -21,10 +21,9 @@ weatherForm.addEventListener('submit', (e) => {
                 messageOne.textContent = data.error
             }
             else {
-                console.log(data) 
                 messageOne.textContent = data.location
-                messageTwo.textContent = data.temp + '°F'
-                messageThree.textContent = 'Feels like ' + data.feels_like +  '°F. ' + data.weather 
+                messageTwo.textContent = data.forecastData.temp + '°F'
+                messageThree.textContent = 'Feels like ' + data.forecastData.feels_like +  '°F. ' + data.forecastData.weather 
             }
         })
     })

@@ -69,7 +69,10 @@ app.get('/weather', (req, res) => {
                 return res.send({error})
             }
 
-            res.send(forecastData)
+            res.send({
+                forecastData,
+                location: location,
+            })
         })
     })
 })
