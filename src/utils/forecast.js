@@ -1,7 +1,6 @@
 const request = require('request')
-
-require('request')
 const log = console.log
+
 
 const forecast = (lon, lat, callback) => {
     const url = 'https://api.openweathermap.org/data/2.5/onecall?lat=' + lat +'&lon='+ lon +'&units=imperial&appid=4a95ccab489160511299dcafdef01047'
@@ -14,8 +13,13 @@ const forecast = (lon, lat, callback) => {
             callback('Unable to find location!', undefined)
         }
         else {
+            log(body.current.feels_like)
+            log(body.current.weather[0].description)
             callback(undefined,{
-                temp: body.current.temp
+                temp: body.current.temp, 
+                weather: body.current.weather[0].description,
+                feels_like: body.current.feels_like,
+                icon: body.current.weather[0].icon,
             })
         }
     })
