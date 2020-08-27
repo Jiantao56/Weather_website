@@ -45,6 +45,23 @@ button {
     padding: 8px;
 }
 
+.weather-temp {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+#message-2 {
+    font-size: 36px;
+    font-weight: 100;
+}
+
+#message-3 {
+    font-weight: bold;
+}
+
 footer {
     color: #888888;
     border-top: 1px solid #eeeeee;
